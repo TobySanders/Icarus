@@ -25,6 +25,7 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: false
+    projects: '**/*.csproj'
     arguments: --output $(Build.ArtifactStagingDirectory)   
 - task: DotNetCoreCLI@2
   displayName: Run unit tests
