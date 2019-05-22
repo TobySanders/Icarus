@@ -15,11 +15,17 @@ steps:
     packageType: 'sdk'
     version: '2.2.x'
 - task: DotNetCoreCLI@2
-  displayName: Build and publish
+  displayName: Build
   inputs:
-    command: publish
+    command: build
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
+- task: DotNetCoreCLI@2
+  displayName: publish
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    arguments: --output $(Build.ArtifactStagingDirectory)   
 - task: DotNetCoreCLI@2
   displayName: Run unit tests
   inputs:
