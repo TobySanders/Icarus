@@ -15,13 +15,7 @@ steps:
     packageType: 'sdk'
     version: '2.2.x'
 - task: DotNetCoreCLI@2
-  displayName: Build
-  inputs:
-    command: build
-    projects: '**/*.csproj'
-    arguments: '--configuration Release' # Update this to match your need
-- task: DotNetCoreCLI@2
-  displayName: publish
+  displayName: Build and publish
   inputs:
     command: 'publish'
     publishWebProjects: false
