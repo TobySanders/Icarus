@@ -13,7 +13,7 @@ steps:
 - task: DotNetCoreInstaller@0 
   displayName: Prepare build agent
   inputs:
-    version: '2.2.0'
+    version: 2.x
 - script: dotnet restore
   displayName: Restore packages
 - task: DotNetCoreCLI@2
