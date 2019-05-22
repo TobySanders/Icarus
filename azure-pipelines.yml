@@ -15,11 +15,12 @@ steps:
     packageType: 'sdk'
     version: '2.2.x'
 - task: DotNetCoreCLI@2
-  displayName: Build
+  displayName: Build and publish
   inputs:
-    command: build
+    command: 'publish'
+    publishWebProjects: false
     projects: '**/*.csproj'
-    arguments: '--configuration Release' # Update this to match your need
+    arguments: --output $(Build.ArtifactStagingDirectory)   
 - task: DotNetCoreCLI@2
   displayName: Run unit tests
   inputs:
@@ -36,3 +37,6 @@ steps:
     pathtoPublish: $(Build.ArtifactStagingDirectory)
     artifactName: MyBuildOutputs
   displayName: Publish build artifacts
+
+
+
