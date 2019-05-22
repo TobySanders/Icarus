@@ -15,9 +15,9 @@ steps:
     packageType: 'sdk'
     version: '2.2.x'
 - task: DotNetCoreCLI@2
-  displayName: Build
+  displayName: Build and publish
   inputs:
-    command: build
+    command: publish
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
 - task: DotNetCoreCLI@2
@@ -36,3 +36,6 @@ steps:
     pathtoPublish: $(Build.ArtifactStagingDirectory)
     artifactName: MyBuildOutputs
   displayName: Publish build artifacts
+
+
+
