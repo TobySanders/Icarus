@@ -13,7 +13,7 @@ steps:
 - task: DotNetCoreInstaller@0 
   displayName: Prepare build agent
   inputs:
-    version: 2.2.5
+    version: 2.2.x
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
