@@ -20,7 +20,7 @@ namespace MyApi.Tests
         public void FormatMessage_ValidData_ReturnsFormattedMessage()
         {
             var testMessage = "HelloWorld";
-            var expectedResult = "asdhjakshdkajsd";
+            var expectedResult = "asdhjaksajsd";
             var result = _subject.FormatMessage(testMessage);
 
             Assert.Equal(expectedResult, result);
