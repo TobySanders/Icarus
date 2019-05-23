@@ -12,15 +12,13 @@ namespace MyApi.Tests
         public SendMessageCommandTests()
         {
             var configuration = new Mock<IConfiguration>();
-            //configuration.Setup(Config => Config.GetValue<string>("EventHubs:ConnectionString")).Returns((string s)=> "ConnectionString");
-            //configuration.Setup(Config => Config.GetValue<string>("EventHubs:EventHubsName")).Returns((string s)=>"EventHubsName");
             _subject = new SendMessageCommand(configuration.Object);
         }
         [Fact]
         public void FormatMessage_ValidData_ReturnsFormattedMessage()
         {
             var testMessage = "HelloWorld";
-            var expectedResult = "asdhjaksajsd";
+            var expectedResult = "helloworld";
             var result = _subject.FormatMessage(testMessage);
 
             Assert.Equal(expectedResult, result);

@@ -15,11 +15,11 @@ steps:
     packageType: 'sdk'
     version: '2.2.x'
 - task: DotNetCoreCLI@2
-  displayName: Build and publish
+  displayName: Build and publish API
   inputs:
     command: 'publish'
     publishWebProjects: false
-    projects: '**/*.csproj'
+    projects: '**/MyApi/**/*.csproj'
     arguments: --output $(Build.ArtifactStagingDirectory)   
 - task: DotNetCoreCLI@2
   displayName: Run unit tests
