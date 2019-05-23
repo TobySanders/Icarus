@@ -17,9 +17,10 @@ steps:
 - task: CopyFiles@2
   displayName: Copy ARM to artifacts
   inputs:
-    SourceFolder: 'ARM'
-    Contents: '**.ps1
-      **.json'
+    SourceFolder: '$(Build.SourcesDirectory)/ARM'
+    Contents: |
+      *.ps1
+      *.json
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     CleanTargetFolder: true
 - task: DotNetCoreCLI@2
