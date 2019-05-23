@@ -17,7 +17,7 @@ steps:
 - task: CopyFiles@2
   displayName: Copy ARM to artifacts
   inputs:
-    SourceFolder: '**/ARM'
+    SourceFolder: 'ARM'
     Contents: '**.ps1
       **.json'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
