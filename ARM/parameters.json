@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_DevOpsToby_name": {
+            "value": null
+        },
+        "serverfarms_DevOps_name": {
+            "value": null
+        },
+        "namespaces_TobyDevOpsEventHubs_name": {
+            "value": null
+        },
+        "components_AI_DevOpsResources_9b32_name": {
+            "value": null
+        },
+        "alertrules_Failure_Anomalies___AI_DevOpsResources_9b32_name": {
+            "value": null
+        }
+    }
+}
