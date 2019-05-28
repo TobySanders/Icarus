@@ -287,17 +287,6 @@
                     "Send"
                 ]
             }
-        },
-        {
-            "type": "Microsoft.EventHub/namespaces/eventhubs/consumergroups",
-            "apiVersion": "2017-04-01",
-            "name": "[concat(parameters('namespaces_TobyDevOpsEventHubs_name'), '/messages/$Default')]",
-            "location": "UK South",
-            "dependsOn": [
-                "[resourceId('Microsoft.EventHub/namespaces/eventhubs', parameters('namespaces_TobyDevOpsEventHubs_name'), 'messages')]",
-                "[resourceId('Microsoft.EventHub/namespaces', parameters('namespaces_TobyDevOpsEventHubs_name'))]"
-            ],
-            "properties": {}
         }
     ]
 }
